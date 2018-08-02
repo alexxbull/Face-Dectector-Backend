@@ -33,6 +33,8 @@ app.post('/register', register.handleRegister(db, bcrypt));
 app.post('/signin', signin.handleSignin(db, bcrypt))
 app.put('/attempts', image.updateAttempts(db))
 
-app.listen(3001, ()=> {
-   console.log('app is running on port 3001');
+const PORT = process.env.PORT;
+
+app.listen(PORT || 3001, ()=> {
+   console.log(`app is running on port ${PORT}`);
 });
