@@ -4,6 +4,8 @@ const api = new Clarifai.App({
    apiKey: process.env.API_CLARIFAI,
 });
 
+console.log('key', api.apiKey)
+
  const handleApiCall = (req, res) =>
  {
    api.models
