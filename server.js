@@ -26,7 +26,7 @@ const app = express();
 app.use(bodyParser.json())
 app.use(cors())
 
-app.get('/', (req, res) => res.send(database.users));
+app.get('/', (req, res) => res.send('Server is running...'));
 app.get('/profile/:id', profile.handleProfileGet(db));
 app.post('/imageurl', image.handleApiCall)
 app.post('/register', register.handleRegister(db, bcrypt));
